@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Roll1",
+    "price": 250,
+    "imgUrl": "images/image1.png"
+  },
+  {
+    "id": 2,
+    "name": "Roll2",
+    "price": 395,
+    "imgUrl": "images/image2.png"
+  },
+  {
+    "id": 3,
+    "name": "Roll3",
+    "price": 250,
+    "imgUrl": "images/image3.png"
+  },
+  {
+    "id": 4,
+    "name": "Roll4",
+    "price": 250,
+    "imgUrl": "images/image4.png"
+  },
+  {
+    "id": 5,
+    "name": "Roll5",
+    "price": 250,
+    "imgUrl": "images/image5.png"
+  },
+  {
+    "id": 6,
+    "name": "Roll6",
+    "price": 250,
+    "imgUrl": "images/image6.png"
+  },
+  {
+    "id": 7,
+    "name": "Roll1",
+    "price": 250,
+    "imgUrl": "images/image1.png"
+  },
+  {
+    "id": 8,
+    "name": "Roll1",
+    "price": 250,
+    "imgUrl": "images/image1.png"
+  }
+]

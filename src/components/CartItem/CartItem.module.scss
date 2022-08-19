@@ -1,0 +1,53 @@
+.item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(163, 161, 161, 0.438);
+
+  &__price_container {
+    display: flex;
+    flex: 1 1 auto;
+  }
+  &__title {
+    width: 100%;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    /* identical to box height, or 178% */
+
+    color: #000000;
+  }
+
+  &__price {
+    margin-right: 20px;
+    font-family: "RobotoBold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+
+    color: #000000;
+
+    @media (max-width: 500px) {
+      margin-right: 5px;
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+
+  &__quantity {
+    display: flex;
+    width: 40px;
+    justify-content: center;
+  }
+}

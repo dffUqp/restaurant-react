@@ -1,0 +1,34 @@
+.inputBlock {
+  display: flex;
+  flex: 0 1 690px;
+  margin: 0 7px;
+  background: #ffffff;
+  position: relative;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  padding: 8px 12px 8px 10px;
+  gap: 4px;
+
+  @media (max-width: 600px) {
+    position: absolute;
+ 
+    left: 0;
+    margin: 0px;
+    top: 100px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__input {
+    border: none;
+    flex: 0 1 100%;
+    outline: none;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+}

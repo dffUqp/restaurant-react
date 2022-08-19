@@ -1,0 +1,108 @@
+.hints {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(100px, 714px));
+  position: absolute;
+  top: 43px;
+  left: -1px;
+
+  &__hint {
+    display: flex;
+    position: relative;
+    background: #ffffff;
+    align-items: center;
+    border: 1px solid #d9d9d9ae;
+    padding: 15px 30px 15px 0px;
+    @media (max-width: 845px) {
+      padding: 15px 20px 15px 15px;
+    }
+
+    &:hover {
+      .hints__hint-hover {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__img {
+      max-width: 200px;
+      object-fit: cover;
+
+      @media (max-width: 845px) {
+        display: none;
+      }
+    }
+
+    &__about {
+      max-width: 250px;
+    }
+
+    &__title {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+
+      font-size: 21px;
+      line-height: 32px;
+
+      color: #000000;
+
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-line-clamp: 1;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      display: -webkit-box;
+
+      word-wrap: break-word;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+    }
+
+    &__subtitle {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+
+      font-size: 17px;
+      line-height: 21px;
+
+      color: #8c8c8c;
+
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-line-clamp: 2;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      display: -webkit-box;
+      word-wrap: break-word;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+    }
+
+    &__price {
+      font-family: 'RobotoBold';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 32px;
+
+      color: #000000;
+      margin-left: 27px;
+
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__hint-hover {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background: #d9d9d97d;
+    width: 100%;
+    height: 100%;
+  }
+}
