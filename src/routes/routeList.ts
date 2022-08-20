@@ -11,8 +11,8 @@ export interface ISocialLink {
 }
 
 export const routesItems: IRoutesItem[] = [
-  { path: '/', title: 'Home' },
-  { path: 'restaurant', title: 'Restaruant' },
+  { path: 'home', title: 'Home' },
+  { path: '/', title: 'Restaruant' },
 ];
 
 export const socialLinks: ISocialLink[] = [

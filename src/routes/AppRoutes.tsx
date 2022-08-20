@@ -13,15 +13,15 @@ const AppRoutes = () => {
       path: '/',
       element: <Layout />,
       children: [
-        { index: true, element: <Home /> },
-        { path: 'restaurant', element: <Restaurant /> },
+        { index: true, element: <Restaurant /> },
+        { path: 'home', element: <Home /> },
         { path: 'roll/:id', element: <Roll /> },
         { path: 'search', element: <Search /> },
       ],
     },
     {
       path: '*',
-      element: <Navigate to="restaurant" state={{ from: location }} replace />,
+      element: <Navigate to="/" state={{ from: location }} replace />,
     },
   ]);
 
