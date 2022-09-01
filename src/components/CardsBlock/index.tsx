@@ -7,7 +7,7 @@ type CardsBlockProps = {
   data: IShopItem[];
 };
 
-const CardsBlock = ({ data }: CardsBlockProps) => {
+const CardsBlock = ({ data }: CardsBlockProps): JSX.Element => {
   return !data.length ? (
     <h1 style={{ display: 'flex', justifyContent: 'center', color: ' grey' }}>
       Nothing

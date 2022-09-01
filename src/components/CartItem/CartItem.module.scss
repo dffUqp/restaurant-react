@@ -12,24 +12,22 @@
   }
   &__title {
     width: 100%;
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
-    /* identical to box height, or 178% */
 
     color: #000000;
   }
 
   &__price {
     margin-right: 20px;
-    font-family: "RobotoBold";
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 32px;
-    /* identical to box height, or 160% */
 
     color: #000000;
 
@@ -49,5 +47,11 @@
     display: flex;
     width: 40px;
     justify-content: center;
+  }
+
+  &__btn {
+    background: #1890ff;
+    border: 1px solid #1890ff;
+    color: white;
   }
 }

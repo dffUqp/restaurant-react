@@ -1,0 +1,40 @@
+.restaurant {
+    padding-bottom: 50px;
+  
+    &__text {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 40px;
+  
+      &__title {
+        font-family: 'Roboto';
+        font-size: 36px;
+        line-height: 42px;
+  
+        color: #000000;
+      }
+  
+      &__stars {
+        display: flex;
+        align-items: center;
+  
+        font-family: 'Roboto';
+        font-size: 18px;
+        line-height: 32px;
+        color: #ffc107;
+  
+        gap: 5px;
+      }
+  
+      &__categories {
+        font-family: 'Roboto';
+  
+        font-size: 18px;
+        line-height: 32px;
+  
+        color: #8c8c8c;
+      }
+    }
+  }
+  

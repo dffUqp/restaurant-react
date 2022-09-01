@@ -1,9 +1,9 @@
 import { FocusEvent, KeyboardEvent, useMemo, useState } from 'react';
-import { useInputContext } from '../../context/SearchContent';
+import { useInputContext } from '../../contexts/SearchContext';
 import { useSearchFilter } from '../../hooks/useSearchFilter';
 import styles from './InputWithHints.module.scss';
 import storeItems from '../../data/resItems.json';
-import SearchInput from '../UI/SearchInput';
+import MainInput from '../UI/inputs/MainInput';
 import { formatCurrency } from '../../utils/formatCurrency';
 import { createSearchParams, Link, useNavigate } from 'react-router-dom';
 
@@ -58,7 +58,7 @@ const InputWithHints = (): JSX.Element => {
   };
 
   return (
-    <SearchInput
+    <MainInput
       tabIndex={1}
       onFocus={() => setIsHintsVisible(true)}
       onBlur={handleBlur}
@@ -101,7 +101,7 @@ const InputWithHints = (): JSX.Element => {
           )}
         </div>
       )}
-    </SearchInput>
+    </MainInput>
   );
 };
 

@@ -7,7 +7,7 @@ export interface IRoutesItem {
 
 export interface ISocialLink {
   path: string;
-  icon: () => JSX.Element;
+  icon: JSX.Element;
 }
 
 export const routesItems: IRoutesItem[] = [
@@ -16,6 +16,6 @@ export const routesItems: IRoutesItem[] = [
 ];
 
 export const socialLinks: ISocialLink[] = [
-  { path: 'test', icon: InstagramIcon },
-  { path: 'test2', icon: FacebookIcon },
+  { path: 'item1', icon: <InstagramIcon /> },
+  { path: 'item2', icon: <FacebookIcon /> },
 ];

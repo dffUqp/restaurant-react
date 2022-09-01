@@ -1,0 +1,12 @@
+@import './base/reset';
+@import './base/fonts';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #f5f5f5;
+}

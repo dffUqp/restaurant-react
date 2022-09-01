@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import Container from '../../components/Container';
 import { routesItems, socialLinks } from '../../routes/routeList';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
     <footer>
-      <div className="container">
+      <Container>
         <div className={styles['footer']}>
           <div className={styles['footer__logo']}>
             <Link to="/">
@@ -36,12 +37,12 @@ const Footer = () => {
           <div className={styles['footer__socials']}>
             {socialLinks.map((item) => (
               <Link key={item.path} to={item.path}>
-                {<item.icon />}
+                {item.icon}
               </Link>
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

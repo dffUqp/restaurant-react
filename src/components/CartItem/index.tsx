@@ -1,5 +1,5 @@
 import React, { memo, useState } from 'react';
-import { actions } from '../../context/ShoppingCartContext';
+import { actions } from '../../contexts/ShoppingCartContext';
 import { IShopItem } from '../../ts/dataType';
 import { formatCurrency } from '../../utils/formatCurrency';
 import Button from '../UI/button/Button';
@@ -54,9 +54,13 @@ const CartItem = ({
       </span>
 
       <div className={styles.item__btns}>
-        <Button onClick={decrease}>-</Button>
+        <Button className={styles.item__btn} onClick={decrease}>
+          -
+        </Button>
         <span className={styles.item__quantity}>{quantity}</span>
-        <Button onClick={increase}>+</Button>
+        <Button className={styles.item__btn} onClick={increase}>
+          +
+        </Button>
       </div>
     </div>
   );

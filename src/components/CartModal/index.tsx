@@ -1,4 +1,4 @@
-import { actions, useShoppingCart } from '../../context/ShoppingCartContext';
+import { actions, useShoppingCart } from '../../contexts/ShoppingCartContext';
 import CartItem from '../CartItem';
 import styles from './CartModal.module.scss';
 import { ICartModal } from './CartModal.props';
@@ -25,7 +25,7 @@ const CartModal = ({ isOpen }: ICartModal): JSX.Element | null => {
       >
         <div className={styles.cart__head}>
           <h1 className={styles.cart__title}>Cart</h1>
-          <button className="" onClick={actions?.closeCart}>
+          <button onClick={actions?.closeCart}>
             <svg
               width="26"
               height="26"
