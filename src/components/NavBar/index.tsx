@@ -1,33 +1,34 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { actions } from '../../contexts/ShoppingCartContext';
 import InputWithHints from '../InputWithHints';
 import Button from '../UI/button/Button';
 import { CartIcon, LoginIcon } from '../UI/icons';
+import Logo from '../UI/logo';
 import styles from './NavBar.module.scss';
 
 function Navbar(): JSX.Element {
   return (
-    <>
-      <nav className={styles.nav}>
-        <Link to="/">
-          <img src="images/logo.png" alt="" />
-        </Link>
+    <nav className={styles.nav}>
+      <Logo />
 
-        <InputWithHints />
+      <InputWithHints />
 
-        <div className={styles.btns}>
-          <Button className={styles.btn}>
-            <LoginIcon />
-            Login
-          </Button>
-          <Button className={styles.btn_white} onClick={actions?.openCart}>
-            <CartIcon fill="#000" />
-            Cart
-          </Button>
-        </div>
-      </nav>
-      <div className={styles.absoluteBlock} />
-    </>
+      <div className={styles.nav__btns}>
+        <Button
+          className={[styles.nav__btn, styles['nav__btn-blue']].join(' ')}
+        >
+          <LoginIcon />
+          Login
+        </Button>
+        <Button
+          className={[styles.nav__btn, styles['nav__btn-white']].join(' ')}
+          onClick={actions?.openCart}
+        >
+          <CartIcon fill="#000" />
+          Cart
+        </Button>
+      </div>
+    </nav>
   );
 }
 

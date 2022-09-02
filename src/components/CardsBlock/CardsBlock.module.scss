@@ -1,4 +1,4 @@
-.storeBlock-items {
+.cardsBlock{
   display: grid;
   grid-template-columns: repeat(3, 380px);
   justify-content: center;
@@ -17,5 +17,12 @@
     grid-template-columns: repeat(1, minmax(100px, 1fr));
     gap: 10px;
   }
-
 }
+
+.nothing {
+  display: flex;
+  justify-content: center;
+  color: grey;
+}
+
+
