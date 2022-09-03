@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/restaurant-react/static/css/main.abe1cf81.css",
-    "main.js": "/restaurant-react/static/js/main.d577f3e2.js",
+    "main.css": "/restaurant-react/static/css/main.23e6bb3c.css",
+    "main.js": "/restaurant-react/static/js/main.8d412b6f.js",
     "static/media/Roboto-Regular.ttf": "/restaurant-react/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
     "static/media/Roboto-Bold.ttf": "/restaurant-react/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
     "index.html": "/restaurant-react/index.html",
-    "main.abe1cf81.css.map": "/restaurant-react/static/css/main.abe1cf81.css.map",
-    "main.d577f3e2.js.map": "/restaurant-react/static/js/main.d577f3e2.js.map"
+    "main.23e6bb3c.css.map": "/restaurant-react/static/css/main.23e6bb3c.css.map",
+    "main.8d412b6f.js.map": "/restaurant-react/static/js/main.8d412b6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.abe1cf81.css",
-    "static/js/main.d577f3e2.js"
+    "static/css/main.23e6bb3c.css",
+    "static/js/main.8d412b6f.js"
   ]
 }
