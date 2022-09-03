@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Container from '../../components/Container';
 import Logo from '../../components/UI/logo';
+import { Toggle } from '../../components/UI/toogle';
+import { useTheme } from '../../contexts/ThemeContext';
 import { routesItems, socialLinks } from '../../routes/routeList';
+import { themes } from '../../ts/enums/themeEnum';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
+
+  const {theme, setTheme} = useTheme()
+
   return (
     <footer>
       <Container>
@@ -34,6 +40,13 @@ const Footer = () => {
           </div>
 
           <div className={styles['footer__socials']}>
+            <Toggle
+              onChange={() => {
+                if (theme === themes.light) setTheme(themes.dark);
+                if (theme === themes.dark) setTheme(themes.light);
+              }}
+              value={theme === themes.dark}
+            />
             {socialLinks.map((item) => (
               <Link key={item.path} to={item.path}>
                 {item.icon}

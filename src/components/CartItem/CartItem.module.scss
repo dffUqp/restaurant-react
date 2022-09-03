@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   padding: 15px 0;
   width: 100%;
-  border-bottom: 1px solid rgba(163, 161, 161, 0.438);
+  border-bottom: 1px solid var(--border-bottom);
 
   &__price_container {
     display: flex;
@@ -18,7 +18,7 @@
     font-size: 18px;
     line-height: 32px;
 
-    color: #000000;
+    color: var(--text-color-title);
   }
 
   &__price {
@@ -29,7 +29,7 @@
     font-size: 20px;
     line-height: 32px;
 
-    color: #000000;
+    color: var(--text-color-title);
   }
 
   &__btns {
@@ -48,8 +48,8 @@
   }
 
   &__btn {
-    background: #1890ff;
-    border: 1px solid #1890ff;
-    color: white;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--background-color);
   }
 }

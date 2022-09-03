@@ -7,7 +7,7 @@ import CardsBlock from '../../components/CardsBlock';
 import Container from '../../components/Container';
 
 const Search = () => {
-  let [searchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const searchValue = (searchParams.values().next().value ?? undefined) || '';
   const data = useSearchFilter(storeItems, searchValue);
 

@@ -1,6 +1,6 @@
 footer {
   margin-top: auto;
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 .footer {
@@ -32,13 +32,13 @@ footer {
       font-family: 'Roboto';
       font-size: 18px;
       line-height: 21px;
-      color: #595959;
+      color: var(--text-color-secondary);
 
       &-active {
         font-family: 'Roboto';
         font-size: 18px;
         line-height: 21px;
-        color: #444343;
+        color: var(--text-color-disadable);
       }
     }
   }

@@ -24,7 +24,7 @@ function Navbar(): JSX.Element {
           className={[styles.nav__btn, styles['nav__btn-white']].join(' ')}
           onClick={actions?.openCart}
         >
-          <CartIcon fill="#000" />
+          <CartIcon color="#000" />
           Cart
         </Button>
       </div>

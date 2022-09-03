@@ -7,12 +7,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--background-transparent);
   overflow: hidden;
 }
 
 .loader {
-  color: rgb(33, 218, 255);
+  color: var(--primary);
   font-size: 20px;
   margin: 100px auto;
   width: 1em;

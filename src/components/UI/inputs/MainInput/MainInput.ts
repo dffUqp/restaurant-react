@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
-export interface ISearchInputProps
+export interface IMainInputProps
   extends DetailedHTMLProps<
     InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement

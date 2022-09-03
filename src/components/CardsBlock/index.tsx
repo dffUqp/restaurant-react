@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { IShopItem } from '../../ts/dataType';
+import { IShopItem } from '../../ts/interfaces/dataType';
 import Card from '../Card';
 import styles from './CardsBlock.module.scss';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MainInput.module.scss';
-import { ISearchInputProps } from './MainInput';
+import { IMainInputProps } from './MainInput';
 
 const MainInput = ({
   tabIndex,
@@ -8,7 +8,7 @@ const MainInput = ({
   onBlur,
   children,
   ...props
-}: ISearchInputProps): JSX.Element => {
+}: IMainInputProps): JSX.Element => {
   return (
     <div
       className={styles.MainInput}

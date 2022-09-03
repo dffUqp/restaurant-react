@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react';
 import { actions } from '../../contexts/ShoppingCartContext';
-import { IShopItem } from '../../ts/dataType';
+import { IShopItem } from '../../ts/interfaces/dataType';
 import { formatCurrency } from '../../utils/formatCurrency';
 import Button from '../UI/button/Button';
 import Loader from '../UI/loader';

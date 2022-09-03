@@ -12,6 +12,7 @@ const InputWithHints = (): JSX.Element => {
   const [isHintsVisible, setIsHintsVisible] = useState(true);
   const [btnMoreVisible, setBtnMoreVisible] = useState<boolean>(false);
 
+
   const allItems = useSearchFilter(storeItems, inputValue);
   const navigate = useNavigate();
   const searchParams = createSearchParams({ q: inputValue });
@@ -22,21 +23,18 @@ const InputWithHints = (): JSX.Element => {
       return [];
     }
 
-    let hintsItems = allItems;
-
     if (allItems.length >= 3) {
-      hintsItems = hintsItems.splice(0, 2);
       setBtnMoreVisible(true);
-    } else {
-      setBtnMoreVisible(false);
+      return allItems.splice(0, 2);
     }
 
-    return hintsItems;
+    setBtnMoreVisible(false);
+
+    return allItems;
   }, [inputValue, allItems]);
 
   const handleBlur = (e: FocusEvent<HTMLDivElement>) => {
     const currentTarget = e.currentTarget;
-    console.log(currentTarget);
 
     setTimeout(() => {
       if (!currentTarget.contains(document.activeElement)) {
@@ -46,11 +44,7 @@ const InputWithHints = (): JSX.Element => {
   };
 
   const pushQuery = () => {
-    navigate({
-      pathname: `search`,
-
-      search: `?${searchParams}`,
-    });
+    navigate(`search?${searchParams}`, { replace: true });
   };
 
   const onHandler = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -82,7 +76,7 @@ const InputWithHints = (): JSX.Element => {
                 <div className={styles.hints__hint__about}>
                   <span className={styles.hints__hint__title}>{item.name}</span>
                   <p className={styles.hints__hint__subtitle}>
-                    Рис, угорь, каку унаги, кунжут, водоросли нори.
+                    Rice, eel, unagi sauce, sesame seeds, nori seaweed.
                   </p>
                 </div>
                 <span className={styles.hints__hint__price}>

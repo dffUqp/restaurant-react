@@ -58,7 +58,7 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
               onClick={addToCart}
             >
               In Cart
-              <CartIcon fill="#000" />
+              <CartIcon color="#000" />
             </Button>
           )}
 

@@ -1,0 +1,48 @@
+.switch {
+  position: relative;
+  width: 70px;
+
+  label {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: var(--text-color-secondary);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  input {
+    position: absolute;
+    display: none;
+
+    &:checked ~ .switch__slider {
+      background-color: var(--background-color-secondary);
+    }
+
+    &:checked ~ .switch__slider::before {
+      transform: translateX(40px);
+      background-color: var(--text-color-title);
+      box-shadow: none;
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      box-shadow: inset 5px -4px 0px 0px var(--background-color);
+      transition: 0.3s;
+    }
+  }
+}

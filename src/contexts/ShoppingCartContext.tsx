@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
 import CartModal from '../components/CartModal';
-import { ICartItem } from '../ts/dataType';
+import { ICartItem } from '../ts/interfaces/dataType';
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
@@ -30,6 +30,7 @@ export let actions: TShoppingCartActions | null = null;
 export function ShoppingCartProvider({
   children,
 }: ShoppingCartProviderProps): JSX.Element {
+
   const [cartItems, setCartItems] = useState<ICartItem[]>([]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 

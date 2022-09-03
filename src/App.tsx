@@ -5,16 +5,19 @@ import './assets/sass/app.scss';
 import './utils/scroll';
 
 import AppRoutes from './routes/AppRoutes';
+import ThemeProvider from './contexts/ThemeContext';
 
 function App() {
   return (
-    <ShoppingCartProvider>
-      <InputProvider>
-        <div className="wrapper">
-          <AppRoutes />
-        </div>
-      </InputProvider>
-    </ShoppingCartProvider>
+    <ThemeProvider>
+      <ShoppingCartProvider>
+        <InputProvider>
+          <div className="wrapper">
+            <AppRoutes />
+          </div>
+        </InputProvider>
+      </ShoppingCartProvider>
+    </ThemeProvider>
   );
 }
 

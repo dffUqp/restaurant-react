@@ -1,4 +1,4 @@
-.cardsBlock{
+.cardsBlock {
   display: grid;
   grid-template-columns: repeat(3, 380px);
   justify-content: center;
@@ -22,7 +22,5 @@
 .nothing {
   display: flex;
   justify-content: center;
-  color: grey;
+  color: var(--text-color-secondary);
 }
-
-

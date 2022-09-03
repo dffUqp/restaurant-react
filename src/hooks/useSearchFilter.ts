@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { IShopItem } from '../ts/dataType';
+import { IShopItem } from '../ts/interfaces/dataType';
 
 export const useSearchFilter = (
   searchItems: IShopItem[],
