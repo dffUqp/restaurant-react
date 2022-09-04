@@ -9,7 +9,7 @@ const Logo = () => {
 
   return (
     <Link to="/" className={styles.logo}>
-      <img src={theme === themes.light ? 'images/logo.png' : 'images/DarkModelogo.png'} alt="logo" />
+      <img src={theme === themes.light ? 'images/logo.png' : 'images/DarkModeLogo.png'} alt="logo" />
     </Link>
   );
 };
