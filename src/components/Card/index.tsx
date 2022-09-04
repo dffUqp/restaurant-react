@@ -28,11 +28,11 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
     }
   }, [quantity]);
 
+
   const addToCart = () => {
     if (quantity < 1) {
       actions?.increaseCartQuntity(id);
       setQuantity(1);
-      console.log(quantity);
     } else {
       actions?.openCart();
     }
@@ -58,7 +58,7 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
               onClick={addToCart}
             >
               In Cart
-              <CartIcon color="#000" />
+              <CartIcon fill="#000" />
             </Button>
           )}
 

@@ -71,11 +71,11 @@
     margin-top: auto;
     padding-top: 15px;
 
-    font-family: 'Roboto';
+    font-family: var(--primary-font);
     font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 42px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
 
     color: var(--text-color-title);
 

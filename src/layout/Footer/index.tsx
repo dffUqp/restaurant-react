@@ -10,8 +10,7 @@ import { themes } from '../../ts/enums/themeEnum';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
-
-  const {theme, setTheme} = useTheme()
+  const { theme, setTheme } = useTheme();
 
   return (
     <footer>

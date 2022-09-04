@@ -29,16 +29,16 @@ footer {
     gap: 15px;
 
     &__link {
-      font-family: 'Roboto';
+      font-family: var(--primary-font);
       font-size: 18px;
       line-height: 21px;
-      color: var(--text-color-secondary);
+      color: var(--link);
 
       &-active {
-        font-family: 'Roboto';
+        font-family: var(--primary-font);
         font-size: 18px;
         line-height: 21px;
-        color: var(--text-color-disadable);
+        color: var(--link-active);
       }
     }
   }

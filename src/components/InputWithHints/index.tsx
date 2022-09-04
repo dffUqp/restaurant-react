@@ -89,7 +89,7 @@ const InputWithHints = (): JSX.Element => {
             <Link to={`search?${searchParams}`}>
               <div className={styles.hints__hint}>
                 <div className={styles['hints__hint-hover']} />
-                <span>MOREEE</span>
+                <span className={styles.hints__hint__title}>MOREEE</span>
               </div>
             </Link>
           )}

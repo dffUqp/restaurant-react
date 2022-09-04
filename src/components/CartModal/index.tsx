@@ -4,6 +4,7 @@ import styles from './CartModal.module.scss';
 import { ICartModal } from './CartModal.props';
 import storeItems from '../../data/resItems.json';
 import { memo } from 'react';
+import { formatCurrency } from '../../utils/formatCurrency';
 
 const CartModal = ({ isOpen }: ICartModal): JSX.Element | null => {
   const rootClasses = [styles.cart];
@@ -47,11 +48,10 @@ const CartModal = ({ isOpen }: ICartModal): JSX.Element | null => {
           ))}
         </div>
         <div className={styles.cart__totalPrice}>
-          Total:
-          {cartItems.reduce((total, cartItem) => {
+          {formatCurrency(cartItems.reduce((total, cartItem) => {
             const item = storeItems.find((elem) => elem.id === cartItem.id);
             return total + (item?.price || 0) * cartItem.quantity;
-          }, 0)}
+          }, 0))}
         </div>
       </div>
     </div>

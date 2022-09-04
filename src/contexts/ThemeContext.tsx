@@ -1,16 +1,16 @@
 import React from 'react';
 import { themes } from '../ts/enums/themeEnum';
 
-type ThemeProviderProps = {
+type TThemeProviderProps = {
   children: React.ReactNode;
 };
 
-type themeActions = {
+type TThemeActions = {
   theme: string;
   setTheme: (value: string) => void;
 };
 
-const ThemeContext = React.createContext({} as themeActions);
+const ThemeContext = React.createContext({} as TThemeActions);
 
 export const useTheme = () => {
   return React.useContext(ThemeContext);
@@ -26,7 +26,7 @@ const getTheme = (): string => {
   return themes.dark;
 };
 
-const ThemeProvider = ({ children }: ThemeProviderProps): JSX.Element => {
+const ThemeProvider = ({ children }: TThemeProviderProps): JSX.Element => {
   const [theme, setTheme] = React.useState(getTheme);
 
   React.useEffect(() => {

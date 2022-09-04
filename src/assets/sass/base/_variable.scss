@@ -1,4 +1,6 @@
 :root {
+  --primary-font: 'Roboto';
+
   --yellow: #ffc107;
 
   --background-transparent: rgba(0, 0, 0, 0.5);
@@ -16,21 +18,27 @@
   --text-color-secondary: #8c8c8c;
   --text-color-disadable: #414040;
 
+  --link: #8c8c8c;
+  --link-active: #414040;
+
   --border-color: #d9d9d9;
 
   --primary: #1890ff;
 }
 
 :root[data-theme='dark'] {
-  --background-color: #a1a1a1;
+  --background-color: #575757;
   --background-color-secondary: #3a3b3b;
 
   --text-color-title: #ffffff;
   --text-color-main: #ffffff;
   --text-color-secondary: #e3e1e1;
-  --text-color-disadable: #414040;
+  --text-color-disadable: #8c8c8c;
 
-  --border-color: #7a7a7a;
+  --link: #8c8c8c;
+  --link-active: #e3e1e1;
 
-  --primary: #45e839;
+  --border-color: #494949;
+
+  --primary: #02cedc;
 }

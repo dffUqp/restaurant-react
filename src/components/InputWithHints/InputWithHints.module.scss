@@ -37,7 +37,7 @@
     }
 
     &__title {
-      font-family: 'Roboto';
+      font-family: var(--primary-font);
       font-style: normal;
       font-weight: 400;
 
@@ -60,7 +60,7 @@
     }
 
     &__subtitle {
-      font-family: 'Roboto';
+      font-family: var(--primary-font);
       font-style: normal;
       font-weight: 400;
 
@@ -82,7 +82,7 @@
     }
 
     &__price {
-      font-family: 'Roboto';
+      font-family: var(--primary-font);
       font-style: normal;
       font-weight: 700;
       font-size: 20px;

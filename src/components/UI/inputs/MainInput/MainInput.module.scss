@@ -25,6 +25,12 @@
     flex: 0 1 100%;
     outline: none;
     background-color: var(--background-color);
+    color: var(--text-color-secondary);
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--text-color-secondary);
+      opacity: 75%; /* Firefox */
+    }
   }
 
   &__icon {

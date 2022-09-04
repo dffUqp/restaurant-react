@@ -17,14 +17,14 @@ function Navbar(): JSX.Element {
         <Button
           className={[styles.nav__btn, styles['nav__btn-blue']].join(' ')}
         >
-          <LoginIcon />
+          <LoginIcon  fill='#fff'/>
           Login
         </Button>
         <Button
           className={[styles.nav__btn, styles['nav__btn-white']].join(' ')}
           onClick={actions?.openCart}
         >
-          <CartIcon color="#000" />
+          <CartIcon fill="#000" />
           Cart
         </Button>
       </div>

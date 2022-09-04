@@ -16,7 +16,7 @@
     padding: 24px 24px;
 
     &__title {
-      font-family: 'Roboto';
+      font-family: var(--primary-font);
       font-style: normal;
       font-weight: 400;
 
@@ -27,7 +27,7 @@
     }
 
     &__subtitle {
-      font-family: 'Roboto';
+      font-family: var(--primary-font);
       font-style: normal;
       font-weight: 400;
 
@@ -39,7 +39,7 @@
     }
 
     &__price {
-      font-family: 'Roboto';
+      font-family: var(--primary-font);
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
@@ -52,7 +52,7 @@
     &__btn {
       background: var(--primary);
       border: 1px solid var(--primary);
-      color: var(--background-color);
+      color: var(--text-color-main);
 
       &-clicked {
         background: var(--background-color);
