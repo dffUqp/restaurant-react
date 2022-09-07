@@ -1,4 +1,5 @@
 import React, { memo, useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { actions } from '../../contexts/ShoppingCartContext';
 import { formatCurrency } from '../../utils/formatCurrency';
 import Button from '../UI/button/Button';
@@ -28,7 +29,6 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
     }
   }, [quantity]);
 
-
   const addToCart = () => {
     if (quantity < 1) {
       actions?.increaseCartQuntity(id);
@@ -40,9 +40,13 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
 
   return (
     <div className={styles['card']}>
-      <img src={imgUrl} alt="itemImg" className={styles['card__img']} />
+      <Link to={`roll/${id}`}>
+        <img src={imgUrl} alt="itemImg" className={styles['card__img']} />
+      </Link>
       <div className={styles['card__body']}>
-        <h1 className={styles['card__body__title']}>{name}</h1>
+        <Link to={`roll/${id}`} className={styles['card__body__title']}>
+          {name}
+        </Link>
         <p className={styles['card__body__subtitle']}>
           Rice, eel, unagi sauce, sesame seeds, nori seaweed.
         </p>

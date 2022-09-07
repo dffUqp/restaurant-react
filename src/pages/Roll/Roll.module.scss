@@ -1,0 +1,44 @@
+.roll {
+  &__title {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: var(--text-color-title);
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--text-color-title);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-color-title);
+
+    svg {
+      fill: var(--text-color-title);
+      transition: margin-left 0.1s;
+    }
+
+    @media (hover: hover) {
+      &:hover > svg {
+        margin-left: 5px;
+      }
+    }
+  }
+}

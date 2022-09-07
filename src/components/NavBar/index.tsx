@@ -5,6 +5,7 @@ import Button from '../UI/button/Button';
 import { CartIcon, LoginIcon } from '../UI/icons';
 import Logo from '../UI/logo';
 import styles from './NavBar.module.scss';
+import cn from 'classnames';
 
 function Navbar(): JSX.Element {
   return (
@@ -15,13 +16,13 @@ function Navbar(): JSX.Element {
 
       <div className={styles.nav__btns}>
         <Button
-          className={[styles.nav__btn, styles['nav__btn-blue']].join(' ')}
+          className={cn(styles.nav__btn, styles['nav__btn-blue'])}
         >
           <LoginIcon  fill='#fff'/>
           Login
         </Button>
         <Button
-          className={[styles.nav__btn, styles['nav__btn-white']].join(' ')}
+          className={cn(styles.nav__btn, styles.nav__btn, styles['nav__btn-white'])}
           onClick={actions?.openCart}
         >
           <CartIcon fill="#000" />

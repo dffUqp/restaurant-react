@@ -2,8 +2,8 @@ import { Navigate, useLocation, useRoutes } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import Home from '../pages/Home';
 import Restaurant from '../pages/Restaurant';
-import Roll from '../pages/Roll/Roll';
-import Search from '../pages/Search/Search';
+import Roll from '../pages/Roll';
+import Search from '../pages/Search';
 
 const AppRoutes = () => {
   let location = useLocation();

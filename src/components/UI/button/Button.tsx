@@ -1,10 +1,11 @@
-import React from "react";
-import styles from "./Button.module.scss";
-import { IButton } from "./Button.props";
+import React from 'react';
+import styles from './Button.module.scss';
+import { IButton } from './Button.props';
+import cn from 'classnames';
 
 const Button: React.FC<IButton> = ({ className, children, ...props }) => {
   return (
-    <button className={[className, styles.btn].join(" ")} {...props}>
+    <button className={cn(className, styles.btn)} {...props}>
       {children}
     </button>
   );

@@ -3,14 +3,13 @@ import styles from './Restaruant.module.scss';
 import Cards from '../../data/resItems.json';
 import CardsBlock from '../../components/CardsBlock';
 
-
 const Restaurant = (): JSX.Element => {
   return (
     <section>
       <Container>
         <div className={styles['restaurant']}>
           <div className={styles['restaurant__text']}>
-            <h1 className={styles['restaurant__text__title']}>Тануки</h1>
+            <h1 className={styles['restaurant__text__title']}>Tahykn</h1>
             <span className={styles['restaurant__text__stars']}>
               <svg
                 width="15"
@@ -27,7 +26,7 @@ const Restaurant = (): JSX.Element => {
               4.5
             </span>
             <span className={styles['restaurant__text__categories']}>
-             Rolls
+              Rolls
             </span>
           </div>
 

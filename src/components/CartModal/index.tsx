@@ -5,21 +5,23 @@ import { ICartModal } from './CartModal.props';
 import storeItems from '../../data/resItems.json';
 import { memo } from 'react';
 import { formatCurrency } from '../../utils/formatCurrency';
+import cn from 'classnames';
 
 const CartModal = ({ isOpen }: ICartModal): JSX.Element | null => {
-  const rootClasses = [styles.cart];
   const { cartItems } = useShoppingCart();
 
   if (isOpen) {
     window.disableScroll();
-    rootClasses.push(styles.active);
   } else {
     window.enableScroll();
     return null;
   }
 
   return (
-    <div className={rootClasses.join(' ')} onClick={actions?.closeCart}>
+    <div
+      className={cn(styles.cart, { [styles.active]: isOpen })}
+      onClick={actions?.closeCart}
+    >
       <div
         className={styles.cart__content}
         onClick={(e) => e.stopPropagation()}
@@ -48,10 +50,12 @@ const CartModal = ({ isOpen }: ICartModal): JSX.Element | null => {
           ))}
         </div>
         <div className={styles.cart__totalPrice}>
-          {formatCurrency(cartItems.reduce((total, cartItem) => {
-            const item = storeItems.find((elem) => elem.id === cartItem.id);
-            return total + (item?.price || 0) * cartItem.quantity;
-          }, 0))}
+          {formatCurrency(
+            cartItems.reduce((total, cartItem) => {
+              const item = storeItems.find((elem) => elem.id === cartItem.id);
+              return total + (item?.price || 0) * cartItem.quantity;
+            }, 0)
+          )}
         </div>
       </div>
     </div>

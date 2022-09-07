@@ -16,6 +16,8 @@
     padding: 24px 24px;
 
     &__title {
+      position: relative;
+      width: min-content;
       font-family: var(--primary-font);
       font-style: normal;
       font-weight: 400;
@@ -24,6 +26,11 @@
       line-height: 32px;
 
       color: var(--text-color-title);
+      transition: color 0.1s;
+
+      &:hover {
+        color: var(--text-color-secondary);
+      }
     }
 
     &__subtitle {
