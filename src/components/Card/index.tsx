@@ -40,11 +40,11 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
 
   return (
     <div className={styles['card']}>
-      <Link to={`roll/${id}`}>
+      <Link to={'/roll/' + id}>
         <img src={imgUrl} alt="itemImg" className={styles['card__img']} />
       </Link>
       <div className={styles['card__body']}>
-        <Link to={`roll/${id}`} className={styles['card__body__title']}>
+        <Link to={'/roll/' + id} className={styles['card__body__title']}>
           {name}
         </Link>
         <p className={styles['card__body__subtitle']}>
