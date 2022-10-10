@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About 
 
-This application realizated default marketplace functional: open and close cart, add to cart, remove from cart, search.
+This application realized the default marketplace functional: open and close cart, add to cart, remove from cart, search.
 
 
 Preview [link](https://dffuqp.github.io/restaurant-react)
@@ -17,7 +17,6 @@ Preview [link](https://dffuqp.github.io/restaurant-react)
 - node-sass
 
 ---
-
 
 ## Available Scripts
 
