@@ -1,10 +1,11 @@
-import React from "react";
-
+import Container from '../../components/Container';
 
 const Home = (): JSX.Element => {
   return (
     <section>
-      <h1>Home</h1>
+      <Container>
+        <h1 style={{ color: 'var(--text-color-title)' }}>Home</h1>
+      </Container>
     </section>
   );
 };

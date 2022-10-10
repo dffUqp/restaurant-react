@@ -1,6 +1,6 @@
-import React, { memo, useEffect, useMemo, useState } from 'react';
+import { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { actions } from '../../contexts/ShoppingCartContext';
+import { actions, useShoppingCart } from '../../contexts/ShoppingCartContext';
 import { formatCurrency } from '../../utils/formatCurrency';
 import Button from '../UI/button/Button';
 import { CartIcon } from '../UI/icons';
@@ -14,27 +14,17 @@ type CardProps = {
 };
 
 const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
-  const [isActiveBtn, setIsActiveBtn] = useState<boolean>(false);
-  const [quantity, setQuantity] = useState<number>(0);
-
-  useEffect(() => {
-    setQuantity(actions?.getItemQuntity(id) ?? 0);
-  }, [id]);
-
-  useMemo(() => {
-    if (quantity < 1) {
-      setIsActiveBtn(false);
-    } else {
-      setIsActiveBtn(true);
-    }
-  }, [quantity]);
+  const { cartItems } = useShoppingCart();
+  const isActive = useMemo(
+    () => cartItems.find((item) => item.id === id),
+    [cartItems, id]
+  );
 
   const addToCart = () => {
-    if (quantity < 1) {
-      actions?.increaseCartQuntity(id);
-      setQuantity(1);
-    } else {
+    if (isActive?.quantity) {
       actions?.openCart();
+    } else {
+      actions?.increaseCartQuntity(id);
     }
   };
 
@@ -51,7 +41,7 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
           Rice, eel, unagi sauce, sesame seeds, nori seaweed.
         </p>
         <div>
-          {!isActiveBtn ? (
+          {!isActive?.quantity ? (
             <Button className={styles['card__body__btn']} onClick={addToCart}>
               Cart
               <CartIcon />
@@ -62,7 +52,7 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
               onClick={addToCart}
             >
               In Cart
-              <CartIcon fill="#000" />
+              <CartIcon fill="var(--text-color-disadable)" />
             </Button>
           )}
 

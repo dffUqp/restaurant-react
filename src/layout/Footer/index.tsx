@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Container from '../../components/Container';
 import Logo from '../../components/UI/logo';
@@ -47,9 +46,9 @@ const Footer = () => {
               value={theme === themes.dark}
             />
             {socialLinks.map((item) => (
-              <Link key={item.path} to={item.path}>
+              <a key={item.path} href={item.path}>
                 {item.icon}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

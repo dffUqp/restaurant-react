@@ -12,7 +12,6 @@ const InputWithHints = (): JSX.Element => {
   const [isHintsVisible, setIsHintsVisible] = useState(true);
   const [btnMoreVisible, setBtnMoreVisible] = useState<boolean>(false);
 
-
   const allItems = useSearchFilter(storeItems, inputValue);
   const navigate = useNavigate();
   const searchParams = createSearchParams({ q: inputValue });
@@ -89,7 +88,12 @@ const InputWithHints = (): JSX.Element => {
             <Link to={`search?${searchParams}`}>
               <div className={styles.hints__hint}>
                 <div className={styles['hints__hint-hover']} />
-                <span className={styles.hints__hint__title}>MOREEE</span>
+                <span
+                  style={{ paddingLeft: '10px' }}
+                  className={styles.hints__hint__title}
+                >
+                  MORE
+                </span>
               </div>
             </Link>
           )}
