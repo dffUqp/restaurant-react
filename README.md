@@ -1,4 +1,4 @@
-# Getting Started with Restaurant React App
+# Restaurant React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -8,7 +8,6 @@ This app realized the standard functions of the marketplace: open cart, close ca
 
 Preview [link](https://dffuqp.github.io/restaurant-react)
 
-
 Implemented using:
 
 - TypeScript
@@ -16,28 +15,12 @@ Implemented using:
 - React-Context
 - node-sass
 
----
+## Preview 
 
-## Available Scripts
+![image](https://user-images.githubusercontent.com/96138503/236628462-8dddb2de-2a40-47d6-9535-e19e1d32ab43.png)
 
-In the project directory, you can run:
+![image](https://user-images.githubusercontent.com/96138503/236628364-17fc6bd5-f1c2-4e76-8fbb-025356ef097a.png)
 
-### `npm start`
+![image](https://user-images.githubusercontent.com/96138503/236628372-cfc5b47f-af6b-43dc-8f2f-0e7d14d63825.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+![image](https://user-images.githubusercontent.com/96138503/236628380-8b0e1704-376e-49c1-88c7-3cc55cbd6651.png)
