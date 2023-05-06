@@ -24,7 +24,7 @@ const Card = ({ id, name, price, imgUrl }: CardProps): JSX.Element => {
     if (isActive?.quantity) {
       actions?.openCart();
     } else {
-      actions?.increaseCartQuntity(id);
+      actions?.increaseCartQuantity(id);
     }
   };
 

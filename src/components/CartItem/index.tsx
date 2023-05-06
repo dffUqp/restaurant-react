@@ -27,7 +27,7 @@ const CartItem = ({
     setLoading(true);
 
     setTimeout(() => {
-      actions?.decreaseCartQuntity(id);
+      actions?.decreaseCartQuantity(id);
       setLoading(false);
     }, 300);
   };
@@ -36,7 +36,7 @@ const CartItem = ({
     setLoading(true);
 
     setTimeout(() => {
-      actions?.increaseCartQuntity(id);
+      actions?.increaseCartQuantity(id);
       setLoading(false);
     }, 300);
   };

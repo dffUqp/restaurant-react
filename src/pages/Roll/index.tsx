@@ -23,7 +23,7 @@ const Roll = () => {
           Price {formatCurrency(item.price)}
         </span>
         <Link className={styles.roll__link} to="/">
-          Back to Restourant
+          Back to Restaurant
           <svg
             width="20"
             height="20"

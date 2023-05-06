@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Container from '../../components/Container';
 import Logo from '../../components/UI/logo';
-import { Toggle } from '../../components/UI/toogle';
 import { useTheme } from '../../contexts/ThemeContext';
 import { routesItems, socialLinks } from '../../routes/routeList';
+import { Toggle } from '../../components/UI/toggle';
 import { themes } from '../../ts/enums/themeEnum';
 import styles from './Footer.module.scss';
 

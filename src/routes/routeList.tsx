@@ -12,7 +12,7 @@ export interface ISocialLink {
 
 export const routesItems: IRoutesItem[] = [
   { path: 'home', title: 'Home' },
-  { path: '/', title: 'Restaruant' },
+  { path: '/', title: 'Restaurant' },
 ];
 
 export const socialLinks: ISocialLink[] = [

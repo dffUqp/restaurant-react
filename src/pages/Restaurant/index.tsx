@@ -1,5 +1,5 @@
 import Container from '../../components/Container';
-import styles from './Restaruant.module.scss';
+import styles from './Restaurant.module.scss';
 import Cards from '../../data/resItems.json';
 import CardsBlock from '../../components/CardsBlock';
 

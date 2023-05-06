@@ -7,9 +7,9 @@ type ShoppingCartProviderProps = {
 };
 
 type TShoppingCartActions = {
-  getItemQuntity: (id: number) => number;
-  increaseCartQuntity: (id: number) => void;
-  decreaseCartQuntity: (id: number) => void;
+  getItemQuantity: (id: number) => number;
+  increaseCartQuantity: (id: number) => void;
+  decreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
   openCart: () => void;
   closeCart: () => void;
@@ -30,16 +30,15 @@ export let actions: TShoppingCartActions | null = null;
 export function ShoppingCartProvider({
   children,
 }: ShoppingCartProviderProps): JSX.Element {
-
   const [cartItems, setCartItems] = useState<ICartItem[]>([]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   actions = {
-    getItemQuntity(id: number) {
+    getItemQuantity(id: number) {
       return cartItems.find((item) => item.id === id)?.quantity || 0;
     },
 
-    increaseCartQuntity(id: number) {
+    increaseCartQuantity(id: number) {
       setCartItems((currItems) => {
         if (cartItems.find((item) => item.id === id) == null) {
           return [...currItems, { id: id, quantity: 1 }];
@@ -59,7 +58,7 @@ export function ShoppingCartProvider({
       });
     },
 
-    decreaseCartQuntity(id: number) {
+    decreaseCartQuantity(id: number) {
       setCartItems((currItems) => {
         if (currItems.find((item) => item.id === id)?.quantity === 1) {
           return currItems.filter((item) => item.id !== id);
